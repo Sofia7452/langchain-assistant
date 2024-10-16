@@ -9,12 +9,18 @@ import * as url from "url";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 dotenv.config();
+console.log('path.resolve(__dirname, "../source/vue3-document-en.md")',path.resolve(__dirname, "../source/vue3-document-en.md"));
 
 const loader = new UnstructuredLoader(
-  path.resolve(__dirname, "../source/vue3-document-en.md")
+  path.resolve(__dirname, "../source/vue3-document-en.md"),
+  {
+    apiKey: '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',
+    apiUrl: "https://openrouter.ai/"
+  }
 );
-
+debugger
 const rawDocs = await loader.load();
+console.log('rawDocs', rawDocs);
 
 const splitter = new RecursiveCharacterTextSplitter({
   chunkSize: 1000,

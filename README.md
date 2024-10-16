@@ -25,7 +25,7 @@ cd server && pnpm i
 OPENAI_API_KEY=""
 // pinecone 向量数据库的 api key
 PINECONE_API_KEY=""
-PINECONE_ENVIRONMENT=""
+PINECONE_ENVIRONMENT="us-east-1-aws"
 PINECONE_INDEX=""
 ```
 

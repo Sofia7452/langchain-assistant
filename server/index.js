@@ -2,7 +2,7 @@ import Koa from "koa";
 import Router from "koa-router";
 import { koaBody } from "koa-body";
 import { chat } from "./chat.js";
-
+debugger
 const app = new Koa();
 
 app.use(
